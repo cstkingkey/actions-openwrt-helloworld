@@ -9,6 +9,8 @@
 name: Build OpenWrt
 
 on:
+  issue_comment
+    types: created
   repository_dispatch:
     types: helloworld
   release:
