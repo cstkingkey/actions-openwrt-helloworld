@@ -10,3 +10,9 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.100.100/g' package/base-files/files/bin/config_generate
+
+# fix vlan ports displaying
+sed -i '$a \\\
+.cbi-section-table-descr { \
+    display: table-row !important;\
+}' package/lean/luci-theme-argon/htdocs/luci-static/argon/css/style.css
